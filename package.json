@@ -1,0 +1,30 @@
+{
+    "name": "steno-dictionary-generator",
+    "version": "1.0.0",
+    "description": "Generate a stenogrphy dictionary",
+    "main": "index.js",
+    "dependencies": {
+        "sax": "*",
+        "unbzip2-stream": "*"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JasonWoof/steno-dictionary-generator.git"
+    },
+    "keywords": [
+        "steno",
+        "plover",
+        "wiktionary",
+        "espeak"
+    ],
+    "author": "Jason Woofenden",
+    "license": "GPL-3.0+",
+    "bugs": {
+        "url": "https://github.com/JasonWoof/steno-dictionary-generator/issues"
+    },
+    "homepage": "https://github.com/JasonWoof/steno-dictionary-generator#readme"
+}
