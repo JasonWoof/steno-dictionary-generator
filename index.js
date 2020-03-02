@@ -219,7 +219,7 @@ const to_ndjson = () => simple_object_transform((chunk) => `${JSON.stringify(chu
 const espeak_pronunciations = () => new stream.Transform({
     objectMode: true,
     transform(words, encoding, cb) {
-        const input_text = words.join("\n").replace(/[,.;!?]/g, '');
+        const input_text = words.join("\n").replace(/[,.;!?…]/g, '');
         const espeak = child_process.spawn('espeak', ['-qx']); // --stdin in arg is bugged, works without
         try {
             espeak.stdin.end(input_text);
