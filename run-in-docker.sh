@@ -12,4 +12,4 @@ if [ ! -f .docker-built -o Dockerfile -nt .docker-built ]; then
     fi
 fi
 
-exec docker run -i -t --rm -v "$(readlink -f "$(dirname "$0")")/":/opt/wd/:rw -w /opt/wd "$DOCKER_IMAGE_NAME" ./run.sh "$@"
+exec docker run -i -t -u "$(id -u):$(id -g)" --rm -v "$(readlink -f "$(dirname "$0")")/":/opt/wd/:rw -w /opt/wd "$DOCKER_IMAGE_NAME" ./run.sh "$@"
